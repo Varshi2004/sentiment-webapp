@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMDb Sentiment Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 IMDb Sentiment Classifier</h1>
+        <form method="post" action="/predict">
+            <textarea name="review" placeholder="Type your movie review here..."></textarea>
+            <br>
+            <button type="submit">Predict Sentiment</button>
+        </form>
+        
+        {% if prediction %}
+            <div class="result">
+                <h2>Prediction: <span>{{ prediction }}</span></h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
