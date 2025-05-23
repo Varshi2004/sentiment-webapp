@@ -1,2 +1,6 @@
-flask
-scikit-learn
+Flask==2.3.2
+gunicorn==21.2.0
+numpy==1.25.2
+pandas==2.0.3
+scikit-learn==1.3.0
+joblib==1.3.2
